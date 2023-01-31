@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t viktor/sberapp:latest .'
+				sh 'docker build -t viktor/sberapp:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'sudo docker push viktor/sberapp:latest'
+				sh 'docker push viktor/sberapp:latest'
 			}
 		}
 	}
